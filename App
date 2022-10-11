@@ -1,0 +1,28 @@
+
+import PyPDF2
+import pyttsx3
+
+# ubicación del archivo
+path = open('file.pdf', 'rb')
+
+# creando objeto PdfFileReader
+pdfReader = PyPDF2.PdfFileReader(path)
+
+# desde que página arranca a leer.
+from_page = pdfReader.getPage(1)
+
+# sacando texto del PDF
+text = from_page.extractText()
+
+# leyendo texto:
+# esta parte lee en voz alta el pdf - Inactivo
+
+# speak = pyttsx3.init()
+# speak.say(text)
+# speak.runAndWait()
+
+# sumé otro código para guardar como .mp3
+engine = pyttsx3.init()
+engine.save_to_file(text, 'lorem.mp3')
+engine.runAndWait()
+

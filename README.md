@@ -1,2 +1,2 @@
 # PDF-to-Audio
-Code to create mp3 from a pdf (english only)
+Short code to create mp3 file from a pdf file (english only)
